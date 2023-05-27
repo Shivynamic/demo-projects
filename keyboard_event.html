@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Keyboard Event</title>
+        <style>
+            body{
+                background-color:rgb(38, 61, 190);
+                color: #fff;
+                text-align: center;
+                margin-top: 10%;
+                font-size: 25px;
+            }
+
+            .effect-1{
+                width: 280px;
+                height: 50px;
+                font-size: 20px;
+                padding: 7px 7px;
+            }
+            
+        </style>
+</head>
+<body>
+    <div class="main-div">
+    <div>
+        <p>
+            Write anything here and you'll get to know about keyboard objects.
+        </p>
+        <br>
+        <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+        <br/>
+        <p id="keys"></p>
+
+    </div>
+    </div>
+
+    <script>
+        const keyPress =() =>{
+            document.getElementById('keys').innerHTML = `The key pressed is ${event.code}: gives ${event.key}`
+        }
+
+        const keyDown =() =>{
+            document.getElementById('keys').innerHTML = "Key is down"
+        }
+        
+        const keyUp =() =>{
+            document.getElementById('keys').innerHTML = "Key is Up"
+        }
+        
+    </script>
+</body>
+</html>

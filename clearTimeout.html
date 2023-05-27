@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Keyboard Event</title>
+        <style>
+            body{
+                background-color:rgb(38, 61, 190);
+                color: #fff;
+                text-align: center;
+                margin-top: 10%;
+                font-size: 25px;
+            }
+
+            #btn{
+                width: 180px;
+                height: 60px;
+                font-size: 20px;
+                padding: 7px 7px;
+                background-color: rgb(190, 228, 21);
+                border-radius: 7px;
+            }
+            
+        </style>
+</head>
+<body>
+    <div class="main-div">
+    <div>
+        <p>
+            "Try it" sends alert in 2 seconds. 
+        </p>
+        <p>
+            You can stop it by clicking "Stop" 
+        </p>
+        <p>
+            Condition: You must click stop before 2 seconds
+        </p>
+        
+        <button onclick="myVar = setTimeout(myFunction,2000)" id="btn" >Try it!</button>
+        <button onclick="clearTimeout(myVar)" id="btn" >Stop it</button>
+    </div>
+    </div>
+
+    <script>
+function myFunction(){
+    alert("Hello I executed in 2 secs!")
+}        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Mouse Event</title>
+        <style>
+            body{
+                background-color:rgb(38, 61, 190);
+                color: #fff;
+            }
+            #box {
+                height: 200px;
+                width: 200px;
+                background-color: rgb(228, 255, 105);
+                color: #fff;
+                padding: 10px;
+                border: solid 3px black;
+                margin: auto;
+                margin-top: 10%;
+              }
+              
+        </style>
+</head>
+<body>
+    <p id="myID" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui doloribus delectus sit corporis dolor facere ea sed animi quibusdam iste incidunt velit pariatur consequuntur amet fugit, asperiores laboriosam. Quidem?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque doloribus fugit, repellat unde iure debitis, cum tenetur, laudantium voluptas non voluptatem veritatis nobis natus quis vitae! Numquam, quam temporibus.
+    </p>
+    <div class="main-div">
+    <div id="box"></div>
+    </div>
+
+    <script>
+        function mouseDown(){
+            document.getElementById("myID").style.color= "red"
+                }
+
+        function mouseUp(){
+            document.getElementById("myID").style.color= "yellow"
+                }
+
+        const mEnter = document.getElementById('box')
+
+        mEnter.addEventListener('mouseenter',()=>{
+            mEnter.style.backgroundColor="orange";
+            console.log("Mouse IN")
+        });
+        mEnter.addEventListener('mouseleave',()=>{
+            console.log("Mouse OUT")
+            mEnter.style.backgroundColor="pink";
+            
+        });
+        
+    </script>
+</body>
+</html>

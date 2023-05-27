@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Learning Events</title>
+    <style>
+        body{
+            margin-top: 70px;
+            background-color: rgb(21, 59, 184);
+            text-align: center;
+        }
+
+        .button_su{
+        border: 1px solid;
+        margin: auto;
+        width: 17%;
+        background-color: yellow;
+        font-size: 20px;
+        padding: 15px;
+        padding-left: 17px;
+        padding-right: 17px;
+        border-radius: 7px;
+        margin-top: 25px;
+        text-decoration: black;
+    }
+    .button_text_container{
+        color: olivedrab;
+        display: inline-block;
+    }
+    </style>
+
+
+</head>
+<body>
+    <div class="contet">
+
+    <h1 style="color: aliceblue;">Different ways of calling event</h1>
+
+    <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a href="#" onclick="alert('Hi I am initiated using inline alert')">
+            <span class="button_text_container">
+                Simple Inline alert()
+            </span>
+        </a>
+    </div>
+    <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a href="#" onclick="callingFunction()">
+            <span class="button_text_container">
+                By Calling a function
+            </span>
+        </a>
+    </div>
+    
+
+
+    <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a href="#" class="button_su_inner">
+            <span class="button_text_container" id="thirdWay">
+                Inline Event
+            </span>
+        </a>
+
+    </div>
+
+    <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a href="#" class="button_su_inner">
+            <span class="button_text_container" id="fourthWay">
+                Event Listeners
+            </span>
+        </a>
+
+    </div>
+
+    </div>
+
+    <script>
+        const callingFunction=() =>{
+            alert('initiated by calling a function')
+        }
+
+// in this method below onclick wala parameter gets override while not in fourthway -->
+  
+    const thirdWay = document.getElementById("thirdWay")
+        thirdWay.onclick=function () {
+            alert("I am the third way initiated by inline event")
+    }
+    thirdWay.onclick=function () {
+        console.log("I am the third way initiated by inline event")
+}
+
+    const fourthWay = document.querySelector("#fourthWay")
+    fourthWay.addEventListener('click',()=>{
+        alert("The last way to call event by event listener")
+   
+    })
+    fourthWay.addEventListener('click',()=>{
+      console.log("The last way to call event by event listener")
+   
+    })
+    </script>
+
+</body>
+</html>

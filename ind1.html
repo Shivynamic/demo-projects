@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<style >   
+    body{
+        background-color: rgb(53, 145, 173);
+        text-align: center;
+    }
+    .button {
+        background-color: #f7f313;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border: 0cm;
+        border-radius: 7px;
+        margin-top: 25px;
+      }
+    </style>
+</head>
+<body >
+    <p><button onclick="myHistory()" target="_blank" class="button">Click here
+    </button></p>
+    <br>
+    <p>If you click this buttom it will redirect to the just opened tab.</p>
+<script>
+    function myHistory(){
+        window.history.back();
+    }
+</script>
+</body>
+</html>

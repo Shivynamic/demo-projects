@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Keyboard Event</title>
+        <style>
+            body{
+                background-color:rgb(38, 61, 190);
+                color: #fff;
+                text-align: center;
+                margin-top: 10%;
+                font-size: 25px;
+            }
+
+            #btn{
+                width: 180px;
+                height: 60px;
+                font-size: 20px;
+                padding: 7px 7px;
+                background-color: rgb(190, 228, 21);
+                border-radius: 7px;
+            }
+            
+        </style>
+</head>
+<body>
+    <div class="main-div">
+    <div>
+        <p style="font-size: 40px;">This is a timer that runs infinitely if clicked on the button.</p>
+        <br>
+        <button id="btn">Click here</button>
+
+    </div>
+    </div>
+
+    <script>
+        const stopNum = document.querySelector('p')
+        const btn = document.querySelector('#btn')
+        let num = 0
+        const showMyNum= ()=>{
+            setInterval(()=>{
+                stopNum.innerHTML = `${num}`
+                num++
+            
+            },1000)
+        }
+
+        btn.addEventListener('click',showMyNum)
+        
+        
+    </script>
+</body>
+</html>

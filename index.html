@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<style >   
+    body{
+        background-color: rgb(53, 145, 173);
+        text-align: center;
+        margin: 5%;
+        
+    }
+    .button {
+        background-color: #d48f56; /* Green */
+        border: none;
+        border-radius: 15px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      .para{
+        font-size: 10px;
+        
+      }
+      form{
+        color: azure;
+      }
+    </style>
+</head>
+<body >
+    <p class="para">Random line</p>
+    <p class="para">Random Paragraph</p>
+    <p class="Npara">Another Random line</p>
+    <p class="Npara">Another Random Paragraph</p>
+    <p>This is also a para</p>
+    <p id = "sentence">You can't change me with just a Click</p>
+
+    <form action ="">
+        <label for = "">male</label>
+        <input type = "radio" name="gender" id ="">
+        <label for = "">female</label>
+        <input type = "radio" name="gender" id ="">
+        <label for = "">other</label>
+        <input type = "radio" name="gender" id ="">
+    </form>
+    <br>
+    <button onclick="changeContent()" class="button" style="cursor:pointer">Click here
+    </button>
+    <br>
+    <p><b>If you click this buttom it will change the content.</b></p>
+<script>
+const changeContent = () =>{
+    //document.getElementById("sentence").innerHTML = "Changed you with just a click!";
+
+//<!-- ---------another way of doing the same thing------------- -->
+    const vname = document.getElementById("sentence")
+    vname.innerHTML= "happy now?"
+
+    console.log(document.getElementsByClassName("para"))
+    console.log(document.getElementsByTagName("p"))
+    console.log(document.getElementsByName("gender"))
+    // queryselectors returns the first matching value
+// querySelectorAll return all the elements
+    document.querySelector(".para").innerHTML = "Query Selector changes first occurance of the required tag"
+    
+    // it does not change the content, just returns the occuranc of a tag does not limit merely for class/tag or anything
+    console.log(document.querySelectorAll(".Npara"))
+
+}
+    
+</script>
+</body>
+</html>

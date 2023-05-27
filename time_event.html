@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Keyboard Event</title>
+        <style>
+            body{
+                background-color:rgb(38, 61, 190);
+                color: #fff;
+                text-align: center;
+                margin-top: 10%;
+                font-size: 25px;
+            }
+
+            #btn{
+                width: 180px;
+                height: 60px;
+                font-size: 20px;
+                padding: 7px 7px;
+                background-color: rgb(190, 228, 21);
+                border-radius: 7px;
+            }
+            
+        </style>
+</head>
+<body>
+    <div class="main-div">
+    <div>
+        <p>
+            Who will be a millionaire and on the top of the World?
+        </p>
+        <p id="showName"></p>
+        <br>
+        <button id="btn">Click to know</button>
+
+    </div>
+    </div>
+
+    <script>
+        const myName = document.querySelector('#showName')
+        const btn = document.querySelector('#btn')
+        const showMyname= ()=>{
+            myName.innerHTML= 'Loading...'
+            setTimeout(()=>{
+                myName.innerHTML = 'Shivangi Sharma'
+            },1000)
+        }
+
+        btn.addEventListener('click',showMyname)
+        
+        
+    </script>
+</body>
+</html>
